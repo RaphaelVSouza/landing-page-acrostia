@@ -1,0 +1,26 @@
+.o-header {
+  padding: 2rem;
+  background-color: $white;
+  width: 100%;
+  border-bottom: 2px solid $black;
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-right: 1rem;
+  }
+
+  &__gulpIcon {
+    width: 4rem;
+
+    &:hover {
+      animation: shake 2.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
