@@ -1,5 +1,118 @@
-@import '../core/core';
-@import '../organism/header';
-@import '../organism/main';
-@import '../organism/footer';
-@import '../templates/template';
+@import '../core/core.scss';
+@import '../atoms/loading.scss';
+@import '../organisms/header.scss';
+@import '../organisms/carousel.scss';
+@import '../molecules/land-section.scss';
+@import '../molecules/cards-container.scss';
+@import '../molecules/contact-form.scss';
+@import '../atoms/burger-menu.scss';
+
+#services {
+  background-image: url('../../img/services-bg-pattern.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contacts {
+  background-image: url('../../img/contacts-bg-pattern.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.address-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 1100px) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .address {
+    margin-bottom: 3rem;
+    @media (max-width: 1100px) {
+      place-self: center;
+      text-align: center;
+    }
+
+    &__title {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1.6rem;
+      font-weight: 300;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-areas:
+        'location location map'
+        '. . map'
+        'contacts contacts map';
+      column-gap: 4rem;
+
+      @media (max-width: 1100px) {
+        display: grid;
+        margin: 0 auto;
+        text-align: center;
+        grid-template-areas:
+          'location'
+          'map'
+          'contacts';
+        row-gap: 4rem;
+      }
+    }
+
+    &__location {
+      grid-area: location;
+      font-size: 1.4rem;
+
+      @media (max-width: 1100px) {
+        place-self: center;
+        text-align: center;
+      }
+    }
+
+    &__contacts {
+      grid-area: contacts;
+
+      @media (max-width: 1100px) {
+        place-self: center;
+        text-align: center;
+      }
+
+      dl {
+        width: 19rem;
+      }
+      dt,
+      dd {
+        display: inline-block;
+        font-size: 1.4rem;
+      }
+    }
+
+    &__map {
+      grid-area: map;
+    }
+  }
+
+  .contact {
+    width: 100%;
+    max-width: 48rem;
+
+    &__title {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 1.6rem;
+      font-weight: 300;
+
+      @media (max-width: 1100px) {
+        text-align: center;
+      }
+    }
+  }
+}

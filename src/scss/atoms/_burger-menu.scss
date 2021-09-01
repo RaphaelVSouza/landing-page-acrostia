@@ -1,0 +1,39 @@
+.burger-menu {
+  position: relative;
+  height: 2.2rem;
+  width: 2.2rem;
+  z-index: 20;
+  cursor: pointer;
+
+  &__bar1,
+  &__bar2,
+  &__bar3 {
+    width: 100%;
+    height: 0.2rem;
+    background-color: $white;
+    margin: 0.6rem 0;
+    transition: 0.4s;
+  }
+
+  .change &__bar1,
+  .change &__bar2,
+  .change &__bar3 {
+    background-color: $black;
+  }
+
+  .change &__bar1 {
+    transform: translate(-50%, 0.7rem) rotate(45deg);
+    position: absolute;
+    left: 50%;
+  }
+
+  .change &__bar2 {
+    opacity: 0;
+  }
+
+  .change &__bar3 {
+    transform: translate(-50%, -0.7rem) rotate(-45deg);
+    position: absolute;
+    left: 50%;
+  }
+}

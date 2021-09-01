@@ -1,41 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../dist/css/pages/home.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acrostia | Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="../dist/css/pages/home.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gulp Template | Home</title>
-</head>
-
-<body>
-  <div class="container">
-    <header class="o-header">
-      <div class="o-header__heading">
-        <h1 class="o-header__title">Gulp Template</h1>
-        <a href="https://gulpjs.com/" target="_blank">
-          <img src="../dist/img/gulp.svg" alt="gulp icon" class="o-header__gulpIcon">
-        </a>
-      </div>
+  <body>
+    <header class="heading">
+      <h1 class="heading__logo logo">acrostia</h1>
+      <ul class="burger-menu mobile-only">
+        <li class="burger-menu__bar1"></li>
+        <li class="burger-menu__bar2"></li>
+        <li class="burger-menu__bar3"></li>
+      </ul>
+      <nav class="heading__menu">
+        <ul class="list">
+          <li class="item" data-color="#74c7d5" >
+            <a href="#home"> Home </a>
+          </li>
+          <li class="item" data-color="#df5c64" >
+            <a href="#services"> Services </a>
+          </li>
+          <li class="item" data-color="#82c8bd">
+            <a href="#contacts"> Contacts </a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main class="o-content">
-      <h2 class="o-content__title">About</h2>
-      <p class="o-content__text">This is a template for improving the development productivity using gulp to compile
-        <a href="https://sass-lang.com/" target="_blank" class="sass">Sass</a> and minify files for
-        production environment. I added <a href="https://eslint.org/" target="_blank" class="eslint">Eslint</a> and <a
-          href="https://prettier.io/" target="_blank" class="prettier">Prettier</a> to
-        code lint and format.
-      </p>
-      <a href="https://github.com/RaphaelVSouza" target="_blank">
-        <img class="o-content__image" src="../dist/img/avatar.png" alt="illustration of a men studying with headphones">
-      </a>
-      <cite>Template made by Raphael Vieira</cite>
-      <cite>Avatar made by @arideo on Picrew</cite>
-    </main>
-    <footer> License <a href="https://choosealicense.com/licenses/mit/" target="_blank">MIT</a></footer>
-  </div>
-  <script src="../dist/js/index.js" type="module"></script>
-</body>
+    <main>
+      <section class="carousel-section section-block" id="home">
+        <div class="carousel">
+        <button class="carousel__prev-btn"></button>
+        <div class="carousel__container">
+        </div>
+        <button class="carousel__next-btn"></button>
+        </div>
+        <div class="nav-dots desktop-only"></div>
+      </div>
+      </section>
+      <section class="land-section section-block" id="services">
+        <div class="land-section__container">
+          <h2 class="land-section__title">Our Services</h2>
+          <h3 class="land-section__subtitle">
+            Cras commodo mattis justo nec <span>lobortis</span>. Nam ut tellus
+            lobortis, ullamcorper massa sit amet
+          </h3>
+          <p class="land-section__text">
+            Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien.
+            Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim
+            diam, ullamcorper quis libero et, ultricies<br> commodo est. Quisque at
+            ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet
+            lacus, eget laoreet erat posuere quis.
+          </p>
 
+          <div class="cards-container">
+            <div class="about-card">
+              <div class="about-card__image-container">
+                <img src="../dist/img/lightball.svg" alt="a lightball" />
+              </div>
+              <h3 class="about-card__title">Researching</h3>
+              <p clas="about-card__text">
+                Praesent interdum blandit quam. Asunt in anim uis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="about-card__image-container">
+                <img
+                  src="../dist/img/magic-wand.svg"
+                  alt="a magic wand"
+                />
+              </div>
+              <h3 class="about-card__title">Design</h3>
+              <p clas="about-card__text">
+                Praesent interdum blandit quam. Asunt in anim uis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="about-card__image-container">
+                <img
+                  src="../dist/img/gears.svg"
+                  alt="three gears working together"
+                />
+              </div>
+              <h3 class="about-card__title">Development</h3>
+              <p clas="about-card__text">
+                Praesent interdum blandit quam. Asunt in anim uis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore.
+              </p>
+            </div>
+            <div class="about-card">
+              <div class="about-card__image-container">
+                <img
+                  src="../dist/img/rocket.svg"
+                  alt="a rocket"
+                />
+              </div>
+              <h3 class="about-card__title">Launch</h3>
+              <p clas="about-card__text">
+                Praesent interdum blandit quam. Asunt in anim uis aute irure
+                dolor in reprehenderit in voluptate velit esse cillum dolore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="land-section section-block" id="contacts">
+        <div class="land-section__container">
+          <h2 class="land-section__title">Contact Us</h2>
+          <p class="land-section__text">
+            Cras suscipit porttitor porttitor. Morbi sit amet tincidunt sapien.
+            Curabitur posuere lectus aliquet erat rutrum sollicitudin. In enim
+            diam, ullamcorper quis libero et, ultricies commodo est. Quisque at
+            ante vitae justo fermentum viverra ac eu justo. Ut luctus imperdiet
+            lacus, eget laoreet erat posuere quis.
+          </p>
+          <div class="address-contact">
+            <div class="address">
+              <h4 class="address__title">Address</h4>
+              <div class="wrapper">
+              <div class="address__location">
+                <dl>
+                  <dt>Acrostia</dt>
+                  <dd>Sevenoaks&nbsp;Rd</dd>
+                  <dd>Sevenoaks&nbsp;TN14&nbsp;7HR,&nbsp;UK</dd>
+                </dl>
+              </div>
+              <div class="address__contacts">
+                <dl>
+                    <dt>Phone:</dt>
+                    <dd>+44&nbsp;555&nbsp;555&nbsp;555</dd>
+                    </br>
+                    <dt>Fax:</dt>
+                    <dd>+44&nbsp;556&nbsp;555&nbsp;555</dd>
+                    </br>
+                    <dt>E-mail:</dt>
+                    <dd>info@acrostia.com</dd>
+                    </br>
+                    <dt>Skype:</dt>
+                    <dd>Ac0stia</dd>
+                    </br>
+                </dl>
+              </div>
+
+              <img class="address__map" src="../dist/img/address.png" alt="map with acrostia localization">
+            </div>
+            </div>
+            <div class="contact">
+              <h4 class="contact__title">Ask a question</h4>
+              <form class="contact-form">
+                <input
+                  type="text"
+                  class="contact-form__input"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  type="email"
+                  class="contact-form__input"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <textarea
+                  name="message"
+                  class="contact-form__textarea"
+                  cols="30"
+                  rows="10"
+                  placeholder="Your question"
+                  required
+                ></textarea>
+                <button type="submit" class="contact-form__button-submit">
+                  Send
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="../dist/js/index.js" type="module"></script>
+
+  </body>
 </html>

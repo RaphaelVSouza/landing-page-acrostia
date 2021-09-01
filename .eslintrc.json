@@ -2,17 +2,13 @@
   "env": {
     "browser": true
   },
-  "extends": [
-    "airbnb-base",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 2018
   },
   "rules": {
+    "import/extensions": "always",
     "prettier/prettier": "error"
   }
 }

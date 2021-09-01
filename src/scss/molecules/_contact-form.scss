@@ -1,0 +1,79 @@
+.contact-form {
+  display: grid;
+  grid-template-areas:
+    'name name email email'
+    'message message message message'
+    '. submit submit .';
+  gap: 1.4rem;
+
+  @media (max-width: 1100px) {
+    grid-template-areas:
+      'name name'
+      'email email'
+      'message message'
+      'submit submit';
+  }
+
+  [name='name'] {
+    grid-area: name;
+  }
+
+  [name='email'] {
+    grid-area: email;
+  }
+
+  [name='message'] {
+    grid-area: message;
+  }
+
+  &__button-submit {
+    grid-area: submit;
+    background-color: $red-lighter;
+    color: $white;
+    border: none;
+    border-radius: $default-border-radius;
+    width: 18rem;
+    height: 3.6rem;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+    place-self: center;
+
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $red-light;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    font-family: 'Lato', sans-serif;
+    color: $white;
+    background-color: rgba($color: $black, $alpha: 0.1);
+    border: none;
+    border-radius: $default-border-radius;
+    padding: 1.2rem;
+    transition: 300ms ease-in;
+
+    @media (max-width: 1100px) {
+      width: 100%;
+    }
+
+    &:focus {
+      background-color: $white;
+      color: $black;
+      outline: 2px solid $blue;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    height: 16rem;
+  }
+}
